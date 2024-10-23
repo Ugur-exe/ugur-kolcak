@@ -36,30 +36,50 @@ function Personnel() {
             </div>
 
             <p className='flex justify-start  font-mono'>Worked with</p>
-            <div className='flex flex-wrap justify-between items-center mt-12 '>
+            <div className='flex flex-wrap justify-between items-center my-12'>
                 <div
-                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4'
-                    onClick={() => window.open('https://flutter.dev/', '_blank', 'noopener,noreferrer')}>
-
-                    <TbBrandFlutter className='text-[40px] mr-2' />
-                    <p className='font-bold'>Flutter</p>
+                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
+                    transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
+                    onClick={() => window.open('https://flutter.dev/', '_blank', 'noopener,noreferrer')}
+                >
+                    <TbBrandFlutter className='text-[40px] mr-2 transition-colors duration-300 ease-in-out' />
+                    <p className='font-bold transition-colors duration-500 ease-in-out'>Flutter</p>
                 </div>
 
-                <div className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4' onClick={() => window.open('https://react.dev/', '_blank', 'noopener,noreferrer')}>
-                    <FaReact className='text-[40px] mr-2' />
-                    <a className='font-bold'>React</a>
+                <div
+                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
+                    transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
+                    onClick={() => window.open('https://react.dev/', '_blank', 'noopener,noreferrer')}
+                >
+                    <FaReact className='text-[40px] mr-2 transition-colors duration-300 ease-in-out' />
+                    <p className='font-bold transition-colors duration-500 ease-in-out'>React</p>
                 </div>
-                <div className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4' onClick={() => window.open('https://www.javascript.com/', '_blank', 'noopener,noreferrer')}>
-                    <FaJsSquare className='text-[40px] mr-2' />
-                    <p className='font-bold'>JavaScript</p>
+
+                <div
+                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
+                    transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
+                    onClick={() => window.open('https://www.javascript.com/', '_blank', 'noopener,noreferrer')}
+                >
+                    <FaJsSquare className='text-[40px] mr-2 transition-colors duration-300 ease-in-out' />
+                    <p className='font-bold transition-colors duration-500 ease-in-out'>JavaScript</p>
                 </div>
-                <div className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4' onClick={() => window.open('https://tailwindcss.com/', '_blank', 'noopener,noreferrer')}>
-                    <RiTailwindCssFill className='text-[35px] mr-2' />
-                    <a className='font-bold'>Tailwind Css</a>
+
+                <div
+                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
+                    transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
+                    onClick={() => window.open('https://tailwindcss.com/', '_blank', 'noopener,noreferrer')}
+                >
+                    <RiTailwindCssFill className='text-[35px] mr-2 transition-colors duration-300 ease-in-out' />
+                    <p className='font-bold transition-colors duration-500 ease-in-out'>Tailwind Css</p>
                 </div>
-                <div className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4' onClick={() => window.open('https://firebase.google.com/', '_blank', 'noopener,noreferrer')}>
-                    <RiFirebaseLine className='text-[40px] mr-2' />
-                    <p className='font-bold'>Firebase</p>
+
+                <div
+                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
+                    transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
+                    onClick={() => window.open('https://firebase.google.com/', '_blank', 'noopener,noreferrer')}
+                >
+                    <RiFirebaseLine className='text-[40px] mr-2 transition-colors duration-200 ease-in-out' />
+                    <p className='font-bold transition-colors duration-500 ease-in-out'>Firebase</p>
                 </div>
             </div>
 
