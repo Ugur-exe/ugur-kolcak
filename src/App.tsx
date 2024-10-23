@@ -1,15 +1,17 @@
 
 import './App.css'
-import Header from './components/Navbar'
-import Personnel from './components/Personnel'
+import Personnel from './pages/Personnel'
 
+import CaseStudies from './pages/CaseStudies'
+import Navbar from './components/Navbar'
 function App() {
-
 
   return (
     <div>
-      <Header />
+      <Navbar />
       <Personnel />
+      <CaseStudies />
+
     </div>
   )
 }

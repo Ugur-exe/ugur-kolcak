@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaBars, FaTimes, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     // Mobil menü görünürlüğü için bir state tanımlıyoruz
@@ -9,24 +10,24 @@ const Navbar = () => {
         <div className="flex justify-between items-center bg-[#1B1B1B] h-24 max-w-[1240px] mx-auto px-4 text-white rounded-b-xl">
             {/* Büyük ekranlarda görünen ana menü */}
             <ul className="hidden md:flex w-full justify-evenly text-[#9C9C9C] text-[18px]">
-                <li className="p-4 cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]">
+                <Link className="p-4 cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]" to={'/ugur-kolcak'} >
                     Home
-                </li>
-                <li className="p-4 cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]">
+                </Link>
+                <Link className="p-4 cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]" to={''}>
                     Case Studies
-                </li>
-                <li className="p-4 cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]">
+                </Link>
+                <Link className="p-4 cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]" to={''}>
                     Testimonials
-                </li>
-                <li className="p-4 cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]">
+                </Link>
+                <Link className="p-4 cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]" to={''}>
                     Recent work
-                </li>
-                <li className="p-4 cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]">
+                </Link>
+                <Link className="p-4 cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]" to={''}>
                     Get In Touch
-                </li>
+                </Link>
                 <div className="flex items-center justify-evenly text-[22px] w-[80px]">
-                    <FaLinkedinIn className="cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]" />
-                    <FaGithub className="cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]" />
+                    <FaLinkedinIn className="cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]" onClick={() => window.open('https://www.linkedin.com/in/u%C4%9Fur-kol%C3%A7ak/', '_blank', 'noopener,noreferrer')} />
+                    <FaGithub className="cursor-pointer hover:shadow-lg hover:shadow-white transition-shadow duration-[400ms]" onClick={() => window.open('https://github.com/Ugur-exe', '_blank', 'noopener,noreferrer')} />
                 </div>
             </ul>
 
