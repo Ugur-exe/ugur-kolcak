@@ -12,7 +12,16 @@ function Contact() {
 
     useEffect(() => {
         const count = parseInt(sessionStorage.getItem('emailCount') || '0', 10);
-        setEmailCount(count);
+        const lastTime = parseInt(sessionStorage.getItem('lastEmailTime') || '0', 10);
+        const currentTime = Date.now();
+
+        if (lastTime && (currentTime - lastTime >= 24 * 60 * 60 * 1000)) {
+            sessionStorage.setItem('emailCount', '0');
+            sessionStorage.setItem('lastEmailTime', currentTime.toString());
+            setEmailCount(0);
+        } else {
+            setEmailCount(count);
+        }
     }, []);
 
     const { values, errors, handleSubmit, handleChange, resetForm, touched } = useFormik({
@@ -35,9 +44,12 @@ function Contact() {
                         );
                         toast.success('Success! Your message was sent.');
                         resetForm();
+
                         const newCount = emailCount + 1;
                         setEmailCount(newCount);
+                        const currentTime = Date.now();
                         sessionStorage.setItem('emailCount', newCount.toString());
+                        sessionStorage.setItem('lastEmailTime', currentTime.toString());
                     }
                 } catch (error) {
                     toast.error('Failed to send the message. Please try again.');
