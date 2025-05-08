@@ -1,7 +1,9 @@
-import Image from '../assets/img.jpg'
+import { FaJsSquare, FaReact } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiSpringboot } from "react-icons/si";
+
 import { TbBrandFlutter } from "react-icons/tb";
-import { FaReact, FaJsSquare } from "react-icons/fa";
-import { RiTailwindCssFill, RiFirebaseLine } from "react-icons/ri";
+import Image from '../assets/img.jpg';
 
 import { ReactTyped } from "react-typed";
 
@@ -11,10 +13,10 @@ function Personnel() {
             <div className="flex flex-col md:flex-row justify-evenly mx-auto items-center  md:mt-16 sm:mt-12 mt-4 px-4 max-w-[1024px] ">
                 <div className='grid justify-center items-center pt-4 w-full md:w-[60%] md:mr-6'>
                     <p className='md:text-5xl sm:text-4xl text-xl font-bold mb-3'>
-                        Hi, {<ReactTyped className="md:text-5xl sm:text-4xl text-xl font-bold mb-3 text-[#ecb2b2]" strings={["I'm Uğur Kolçak", "I'm Software Engineer"]} typeSpeed={90} backSpeed={140} loop />}
+                        Hi, {<ReactTyped className="md:text-5xl sm:text-4xl text-xl font-bold mb-3 text-[#ecb2b2]" strings={["I'm Uğur Kolçak", "I'm Computer Engineer"]} typeSpeed={90} backSpeed={140} loop />}
                     </p>
                     <p className='md:text-xl sm:text-lg text-xs font-serif text-[#9C9C9C]'>
-                        Hi, I'm Uğur Kolçak, a mobile developer specializing in <span className='font-bold text-white'>Flutter</span> and <span className='font-bold text-white'>React</span>. I’m passionate about technology and continuously improving my skills to create user-friendly and high-quality apps.
+                        Hi, I'm Uğur Kolçak, a mobile developer with a focus on  <span className='font-bold text-white'>Flutter</span> and <span className='font-bold text-white'>Java Spring Boot</span>. I'm passionate about technology and dedicated to continuously improving my skills to build high-quality, user-friendly applications.
                     </p>
                     <div className='flex justify-start md:mt-4'>
                         <button className='font-mono hidden md:block md:w-[300px] md:h-[62px] w-[250px] h-[40px] py-2 px-4 mt-4 bg-[#3F8E00] text-white font-bold rounded-[2px] border-[#62BA1B] border-[2px]'>
@@ -36,9 +38,9 @@ function Personnel() {
             </div>
 
             <p className='flex justify-start  font-mono'>Worked with</p>
-            <div className='flex flex-wrap justify-between items-center my-12'>
+            <div className='flex flex-wrap justify-between items-center my-8'>
                 <div
-                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
+                    className='cursor-pointer w-[170px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
                     transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
                     onClick={() => window.open('https://flutter.dev/', '_blank', 'noopener,noreferrer')}
                 >
@@ -47,16 +49,23 @@ function Personnel() {
                 </div>
 
                 <div
-                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
+                    className='cursor-pointer w-[170px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
                     transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
                     onClick={() => window.open('https://react.dev/', '_blank', 'noopener,noreferrer')}
                 >
                     <FaReact className='text-[40px] mr-2 transition-colors duration-300 ease-in-out' />
                     <p className='font-bold transition-colors duration-500 ease-in-out'>React</p>
                 </div>
-
                 <div
-                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
+                    className='cursor-pointer w-[170px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
+                    transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
+                    onClick={() => window.open('https://spring.io/', '_blank', 'noopener,noreferrer')}
+                >
+                    <SiSpringboot className='text-[40px] mr-2 transition-colors duration-200 ease-in-out' />
+                    <p className='font-bold transition-colors duration-500 ease-in-out'>Java Spring Boot</p>
+                </div>
+                <div
+                    className='cursor-pointer w-[170px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
                     transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
                     onClick={() => window.open('https://www.javascript.com/', '_blank', 'noopener,noreferrer')}
                 >
@@ -65,7 +74,7 @@ function Personnel() {
                 </div>
 
                 <div
-                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
+                    className='cursor-pointer w-[170px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
                     transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
                     onClick={() => window.open('https://tailwindcss.com/', '_blank', 'noopener,noreferrer')}
                 >
@@ -73,14 +82,7 @@ function Personnel() {
                     <p className='font-bold transition-colors duration-500 ease-in-out'>Tailwind Css</p>
                 </div>
 
-                <div
-                    className='cursor-pointer w-[160px] h-[60px] border-[#1B1B1B] border-[2px] rounded-[6px] flex items-center justify-center text-gray-600 font-mono m-4 
-                    transition-all duration-300 ease-in-out hover:shadow-lg hover:border-white hover:bg-opacity-10 hover:text-white'
-                    onClick={() => window.open('https://firebase.google.com/', '_blank', 'noopener,noreferrer')}
-                >
-                    <RiFirebaseLine className='text-[40px] mr-2 transition-colors duration-200 ease-in-out' />
-                    <p className='font-bold transition-colors duration-500 ease-in-out'>Firebase</p>
-                </div>
+
             </div>
 
         </div>

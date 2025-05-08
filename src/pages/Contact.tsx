@@ -1,9 +1,9 @@
-import { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import toast from 'react-hot-toast';
 import { useFormik } from 'formik';
-import { registerFormSchemas } from '../schemas/RegisterFormSchemas';
+import { useEffect, useRef, useState } from 'react';
+import toast from 'react-hot-toast';
 import { AiOutlineExclamationCircle, AiOutlineLoading } from 'react-icons/ai';
+import { registerFormSchemas } from '../schemas/RegisterFormSchemas';
 
 function Contact() {
     const form = useRef<HTMLFormElement | null>(null);
