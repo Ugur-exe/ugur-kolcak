@@ -1,13 +1,14 @@
 import * as yup from 'yup';
+import i18n from '../i18n/config';
 
 export const registerFormSchemas = yup.object().shape({
-    user_email: yup.string()
-        .email("Enter valid email address")
-        .required("Email address is required"),
-    user_phone: yup.number()
-        .integer("Enter integer")
-        .required("Mobile required field"),
-    user_message: yup.string()
-        .required("Messages required field"),
+    email: yup.string()
+        .email(() => i18n.t('validation.emailInvalid'))
+        .required(() => i18n.t('validation.emailRequired')),
+    phone: yup.number()
+        .integer(() => i18n.t('validation.phoneInteger'))
+        .required(() => i18n.t('validation.phoneRequired')),
+    message: yup.string()
+        .required(() => i18n.t('validation.messageRequired')),
 
 });

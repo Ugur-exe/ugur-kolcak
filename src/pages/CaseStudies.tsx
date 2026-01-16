@@ -1,13 +1,10 @@
 import img1 from '../assets/project-1.png';
 import img2 from '../assets/project-2.png';
 
-import splitStringUsingRegex from "../utils/splitString";
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
-
-const text1 = `The "Eczane Kapında" application is an innovative mobile app that allows users to order medications from the nearest pharmacies and have those orders delivered to their doorsteps.`;
-const text2 = `The "Shorts Clone" application is a dynamic mobile app that replicates the popular YouTube Shorts feature. It enables users to create, upload, and watch short videos effortlessly, fostering a fun and engaging community for quick content consumption.`;
-const headerText = `In the "Case Studies" section, I share my projects and success stories. Each study covers the processes from design to implementation and includes the outcomes I've achieved. This way, you can gain insight into my projects.`;
+import splitStringUsingRegex from "../utils/splitString";
 
 const charVariants = {
     hidden: { opacity: 0 },
@@ -15,6 +12,12 @@ const charVariants = {
 };
 
 function CaseStudies() {
+    const { t } = useTranslation();
+    
+    const headerText = t('caseStudies.description');
+    const text1 = t('caseStudies.pharmacy.description');
+    const text2 = t('caseStudies.shorts.description');
+    
     const headingChars = splitStringUsingRegex(headerText);
     const text1Chars = splitStringUsingRegex(text1);
     const text2Chars = splitStringUsingRegex(text2);
@@ -35,12 +38,12 @@ function CaseStudies() {
     });
 
     return (
-        <div className='flex-col justify-center items-center bg-white h-full'>
+        <div id='case-studies' className='flex-col justify-center items-center bg-white h-full'>
             <h1
                 ref={headingRef}
                 className='flex justify-center items-center pt-8 font-bold text-[28px] sm:text-[32px] md:text-[34px]'
             >
-                Case Studies
+                {t('caseStudies.title')}
             </h1>
             <motion.p
                 initial="hidden"
@@ -58,7 +61,7 @@ function CaseStudies() {
             <div className="flex flex-col sm:flex-col md:flex-row justify-between items-start mt-16 max-w-[1240px] mx-auto px-4 sm:px-16 md:px-32">
                 <div className="flex-col justify-start items-start mb-4 md:mb-0" ref={text1Ref}>
                     <p className="ml-3 font-bold text-[#FFA217]">Fintech</p>
-                    <h1 className="font-bold text-2xl sm:text-3xl md:text-3xl mt-2">Eczane Kapında</h1>
+                    <h1 className="font-bold text-2xl sm:text-3xl md:text-3xl mt-2">{t('caseStudies.pharmacy.title')}</h1>
                     <motion.p
                         initial="hidden"
                         animate={text1InView ? "reveal" : "hidden"}
@@ -89,7 +92,7 @@ function CaseStudies() {
                 </div>
                 <div className="flex-col justify-start items-start" ref={text2Ref}>
                     <p className="ml-3 font-bold text-[#000AFF] bg-[#D0E6FF] inline-block px-2 py-1 rounded-xl">Shorts</p>
-                    <h1 className="font-bold text-2xl sm:text-3xl md:text-3xl mt-2">Shorts Clone</h1>
+                    <h1 className="font-bold text-2xl sm:text-3xl md:text-3xl mt-2">{t('caseStudies.shorts.title')}</h1>
                     <motion.p
                         initial="hidden"
                         animate={text2InView ? "reveal" : "hidden"}

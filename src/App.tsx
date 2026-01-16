@@ -1,11 +1,10 @@
 
-import './App.css'
-import Personnel from './pages/Personnel'
-import CaseStudies from './pages/CaseStudies'
-import Navbar from './components/Navbar'
-import Contact from './pages/Contact'
-import Footer from './pages/Footer'
 import { Toaster } from 'react-hot-toast'
+import './App.css'
+import Navbar from './components/Navbar'
+import CaseStudies from './pages/CaseStudies'
+import Contact from './pages/Contact'
+import Personnel from './pages/Personnel'
 function App() {
 
   return (
@@ -19,7 +18,7 @@ function App() {
       <CaseStudies />
 
       <Contact />
-      <Footer />
+      
     </div>
   )
 }
